@@ -22,7 +22,7 @@ public class JumpScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = transform.position;
+        Vector2 pos = transform.localPosition;
         pos.y = curve.Evaluate(t);
 
         Vector3 kickFlip = transform.eulerAngles;
@@ -46,7 +46,7 @@ public class JumpScript : MonoBehaviour
 
             t2 += Time.deltaTime;
 
-            transform.position = pos;
+            transform.localPosition = pos;
             transform.eulerAngles = kickFlip;
 
                 if (t > 1)

@@ -22,11 +22,11 @@ public class JumpScript1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = transform.position;
-        pos.y = curve.Evaluate(t);
+        Vector2 pos = transform.localPosition;
+        pos.y = curve.Evaluate(t) + 6.2f;
 
-        Vector3 kickFlip = transform.eulerAngles;
-        kickFlip.z = curve2.Evaluate(t2) * speed;
+        //Vector3 kickFlip = transform.eulerAngles;
+        //kickFlip.z = curve2.Evaluate(t2) * speed;
 
         Vector2 squareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
 
@@ -46,15 +46,15 @@ public class JumpScript1 : MonoBehaviour
 
             t2 += Time.deltaTime;
 
-            transform.position = pos;
-            transform.eulerAngles = kickFlip;
+            transform.localPosition = pos;
+            //transform.eulerAngles = kickFlip;
 
                 if (t > 0.5)
                 {
                     t = 0;
-                    t2 = 0;
-                    kickFlip.z = 1;
-                    transform.eulerAngles = kickFlip;
+                    //t2 = 0;
+                    //kickFlip.z = 1;
+                    //transform.eulerAngles = kickFlip;
                     isJumping = true;
                 }
             }
