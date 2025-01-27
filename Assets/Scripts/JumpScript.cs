@@ -28,8 +28,8 @@ public class JumpScript : MonoBehaviour
         Vector3 kickFlip = transform.eulerAngles;
         kickFlip.z = curve2.Evaluate(t2) * speed;
 
-
         Vector2 squareInScreenSpace = Camera.main.WorldToScreenPoint(pos);
+
         if (squareInScreenSpace.x < -10 || squareInScreenSpace.x > Screen.width)
         {
             speed = speed * -1;
@@ -39,18 +39,15 @@ public class JumpScript : MonoBehaviour
         {
             isJumping = true;
         }
+
         if (isJumping == true)
         {
             t += Time.deltaTime;
 
             t2 += Time.deltaTime;
 
-
-
             transform.position = pos;
             transform.eulerAngles = kickFlip;
-
-
 
                 if (t > 1)
                 {
@@ -60,10 +57,6 @@ public class JumpScript : MonoBehaviour
                     transform.eulerAngles = kickFlip;
                     isJumping = false;
                 }
-
-
             }
-
-        }
-    
+        }    
 }
