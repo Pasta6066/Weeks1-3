@@ -12,7 +12,7 @@ public class LerpScript : MonoBehaviour
     public Transform start;
     public Transform end;
 
-    float speed = 0.01f;
+    float speed = 0.0001f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +28,9 @@ public class LerpScript : MonoBehaviour
 
         t += Time.deltaTime + speed;
 
-          if (t > 1 || t < 0.1)
+          if (t > 1)
          {
-             speed *= -1;
+            t = 0;
          }
 
          transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t));
