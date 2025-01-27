@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstScript1 : MonoBehaviour
+public class LerpScript : MonoBehaviour
 {
     public AnimationCurve curve;
 
@@ -14,11 +14,10 @@ public class FirstScript1 : MonoBehaviour
 
     float speed = 0.01f;
 
-
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -27,24 +26,13 @@ public class FirstScript1 : MonoBehaviour
         Vector2 pos = transform.localPosition;
         pos.x += speed;
 
-        
+        t += Time.deltaTime + speed;
 
-        if(pos.x < -1.891 || pos.x > 1.888)
-        {
-            speed = speed * -1;      
-        }
-        transform.localPosition = pos;
+          if (t > 1 || t < 0.1)
+         {
+             speed *= -1;
+         }
 
-       // t += Time.deltaTime + speed;
-       
-      //  if (t > 1 || t < 0.1)
-       // {
-       //     print(t);
-       //     speed *= -1;
-       // }
-
-      //  transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t));
-
-        
+         transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t));
     }
 }
