@@ -360,8 +360,17 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   t: 0
+  curve2:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t2: 0
   start: {fileID: 1517242316}
   end: {fileID: 21294131}
+  start2: {fileID: 21294131}
+  end2: {fileID: 1517242316}
 --- !u!212 &65375305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1920,8 +1929,17 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   t: 0
+  curve2:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t2: 0
   start: {fileID: 938315383}
   end: {fileID: 622316225}
+  start2: {fileID: 622316225}
+  end2: {fileID: 938315383}
 --- !u!212 &972729454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2987,8 +3005,17 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   t: 0
+  curve2:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t2: 0
   start: {fileID: 866624054}
   end: {fileID: 1029458552}
+  start2: {fileID: 1029458552}
+  end2: {fileID: 866624054}
 --- !u!212 &1708234406
 SpriteRenderer:
   m_ObjectHideFlags: 0
