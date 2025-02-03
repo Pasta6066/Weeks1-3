@@ -6,6 +6,7 @@ public class BulletSpawner : MonoBehaviour
 {
     public GameObject prefab;
     public Bullet bullet;
+    public Player_Movement playerMovement;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class BulletSpawner : MonoBehaviour
     {
         GameObject spawnedBullet = Instantiate(prefab);
         bullet = spawnedBullet.GetComponent<Bullet>();
+        transform.position = playerMovement.movement;
     }
 
     void Fire()
